@@ -51,7 +51,7 @@ public class Validation {
         if(!realm.isRegistrationEmailAsUsername()){
             if (isBlank(formData.getFirst(FIELD_USERNAME))) {
                 addError(errors, FIELD_USERNAME, Messages.MISSING_USERNAME);
-            } else if (!isEmailValid(formData.getFirst(FIELD_USERNAME))) {
+            } else if (!isUsernameValid(formData.getFirst(FIELD_USERNAME))) {
                 addError(errors, FIELD_USERNAME, Messages.INVALID_USERNAME);
             }
         }
