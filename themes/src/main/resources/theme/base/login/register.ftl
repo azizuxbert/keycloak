@@ -27,7 +27,7 @@
                     <label for="email" class="${properties.kcLabelClass!}">${msg("email")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" id="email" class="${properties.kcInputClass!}" name="email" value="${(register.formData.email!'')}" autocomplete="email" />
+                    <input type="text" id="email" placeholder="example@email.com" class="${properties.kcInputClass!}" name="email" value="${(register.formData.email!'')}" autocomplete="email" />
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                     <label for="username" class="${properties.kcLabelClass!}">${msg("Mobile")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />
+                    <input type="text" id="username" placeholder="966512345678" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />
                 </div>
             </div>
           </#if>

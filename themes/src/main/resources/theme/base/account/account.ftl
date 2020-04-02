@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-sm-10 col-md-10">
-                    <input type="text" class="form-control" id="username" name="username" <#if !realm.editUsernameAllowed>disabled="disabled"</#if> value="${(account.username!'')}"/>
+                    <input type="text" class="form-control" placeholder="966512345678" id="username" name="username" <#if !realm.editUsernameAllowed>disabled="disabled"</#if> value="${(account.username!'')}"/>
                 </div>
             </div>
         </#if>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="email" name="email" autofocus value="${(account.email!'')}"/>
+                <input type="text" class="form-control" placeholder="example@email.com" id="email" name="email" autofocus value="${(account.email!'')}"/>
             </div>
         </div>
 
