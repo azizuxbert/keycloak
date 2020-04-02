@@ -37,7 +37,7 @@
                     <label for="username" class="${properties.kcLabelClass!}">${msg("Mobile")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" id="username" placeholder="966512345678" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />
+                    <input type="text" id="username" placeholder="0512345678" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />
                 </div>
             </div>
           </#if>

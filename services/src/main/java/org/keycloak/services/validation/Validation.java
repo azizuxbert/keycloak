@@ -43,7 +43,7 @@ public class Validation {
     
     // Actually allow same emails like angular. See ValidationTest.testEmailValidation()
     private static final Pattern EMAIL_PATTERN = Pattern.compile("[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*");
-    private static final Pattern USERNAME_PATTERN = Pattern.compile("(9665)(5|0|3|6|4|9|1|8|7)([0-9]{7})");
+    private static final Pattern USERNAME_PATTERN = Pattern.compile("(05)(5|0|3|6|4|9|1|8|7)([0-9]{7})");
 
     public static List<FormMessage> validateRegistrationForm(KeycloakSession session, RealmModel realm, MultivaluedMap<String, String> formData, List<String> requiredCredentialTypes, PasswordPolicy policy) {
         List<FormMessage> errors = new ArrayList<>();
