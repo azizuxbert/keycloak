@@ -34,7 +34,7 @@
           <#if !realm.registrationEmailAsUsername>
             <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('username',properties.kcFormGroupErrorClass!)}">
                 <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
+                    <label for="username" class="${properties.kcLabelClass!}">${msg("Mobile")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
                     <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />

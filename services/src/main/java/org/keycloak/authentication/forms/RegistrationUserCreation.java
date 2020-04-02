@@ -101,6 +101,13 @@ public class RegistrationUserCreation implements FormAction, FormActionFactory {
                 return;
             }
 
+            if (!Validation.isUsernameValid(username)) {
+                context.error(Errors.INVALID_REGISTRATION);
+                errors.add(new FormMessage(RegistrationPage.FIELD_USERNAME, Messages.INVALID_USERNAME));
+                context.validationError(formData, errors);
+                return;
+            }
+
             if (context.getSession().users().getUserByUsername(username, context.getRealm()) != null) {
                 context.error(Errors.USERNAME_IN_USE);
                 errors.add(new FormMessage(usernameField, Messages.USERNAME_EXISTS));

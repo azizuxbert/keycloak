@@ -43,12 +43,17 @@ public class Validation {
     
     // Actually allow same emails like angular. See ValidationTest.testEmailValidation()
     private static final Pattern EMAIL_PATTERN = Pattern.compile("[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*");
+    private static final Pattern USERNAME_PATTERN = Pattern.compile("^(9665)(5|0|3|6|4|9|1|8|7)([0-9]{7})$");
 
     public static List<FormMessage> validateRegistrationForm(KeycloakSession session, RealmModel realm, MultivaluedMap<String, String> formData, List<String> requiredCredentialTypes, PasswordPolicy policy) {
         List<FormMessage> errors = new ArrayList<>();
 
-        if (!realm.isRegistrationEmailAsUsername() && isBlank(formData.getFirst(FIELD_USERNAME))) {
-            addError(errors, FIELD_USERNAME, Messages.MISSING_USERNAME);
+        if(!realm.isRegistrationEmailAsUsername()){
+            if (isBlank(formData.getFirst(FIELD_USERNAME))) {
+                addError(errors, FIELD_USERNAME, Messages.MISSING_USERNAME);
+            } else if (!isEmailValid(formData.getFirst(FIELD_USERNAME))) {
+                addError(errors, FIELD_USERNAME, Messages.INVALID_USERNAME);
+            }
         }
 
         if (isBlank(formData.getFirst(FIELD_FIRST_NAME))) {
@@ -143,6 +148,10 @@ public class Validation {
 
     public static boolean isEmailValid(String email) {
         return EMAIL_PATTERN.matcher(email).matches();
+    }
+
+    public static boolean isUsernameValid(String username) {
+        return USERNAME_PATTERN.matcher(username).matches();
     }
 
 

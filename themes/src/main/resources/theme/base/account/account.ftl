@@ -17,7 +17,7 @@
         <#if !realm.registrationEmailAsUsername>
             <div class="form-group ${messagesPerField.printIfExists('username','has-error')}">
                 <div class="col-sm-2 col-md-2">
-                    <label for="username" class="control-label">${msg("username")}</label> <#if realm.editUsernameAllowed><span class="required">*</span></#if>
+                    <label for="username" class="control-label">${msg("mobile")}</label> <#if realm.editUsernameAllowed><span class="required">*</span></#if>
                 </div>
 
                 <div class="col-sm-10 col-md-10">
