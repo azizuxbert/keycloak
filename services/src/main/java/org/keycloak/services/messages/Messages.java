@@ -53,7 +53,6 @@ public class Messages {
     public static final String MISSING_EMAIL = "missingEmailMessage";
 
     public static final String MISSING_USERNAME = "missingUsernameMessage";
-    public static final String INVALID_USERNAME = "invalidUsernameMessage";
 
     public static final String MISSING_PASSWORD = "missingPasswordMessage";
 
